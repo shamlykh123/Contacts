@@ -22,6 +22,8 @@ class UserInfoTableViewCell: UITableViewCell {
                     guard let data = data, error == nil else { return }
                     
                     DispatchQueue.main.async { /// execute on main thread
+                        self.titleLabel?.removeFromSuperview()
+                        self.userImage?.image = nil
                         self.userImage?.cornerRadius = (self.userImage?.frame.height)! / 2
                         if(self.tag % 2 != 0){
                      

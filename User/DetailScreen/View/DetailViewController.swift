@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
+            self.titleLabel?.removeFromSuperview()
+            self.userImage?.image = nil
             self.userEmail.text = self.viewModel.userInfo?.email
             self.userName.text = "\(self.viewModel.userInfo?.first_name ?? "")  \(self.viewModel.userInfo?.last_name ?? "")"
             self.userImage?.cornerRadius = (self.userImage?.frame.height)! / 2

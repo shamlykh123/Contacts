@@ -64,6 +64,8 @@ extension UserViewController: UITableViewDataSource,UITableViewDelegate{
         print("Deleted")
         viewModel.deleteRowAtIndex(index: indexPath.row)
         self.userTableView.deleteRows(at: [indexPath], with: .automatic)
+        self.userTableView.reloadData()
+
       }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
